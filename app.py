@@ -7,8 +7,8 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # === UI Setup ===
-st.set_page_config(page_title="🎓 Learning Path Recommender")
-st.title("🎓 Learning‑Path Recommender")
+st.set_page_config(page_title="🎓 MentorMind")
+st.title("🎓 MentorMind")
 st.write("Select your preferences and get a personalized study roadmap.")
 
 # === Input Sliders and Selects ===
