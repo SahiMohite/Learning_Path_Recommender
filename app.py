@@ -32,21 +32,39 @@ st.markdown("""
 
         /* Style the button */
         .stButton button {
-            background-color: #1e40af !important;
-            color: white !important;
-            font-size: 16px !important;
-            font-weight: 600 !important;
-            border-radius: 10px !important;
-            padding: 10px 20px !important;
-            border: none !important;
-            box-shadow: 0px 0px 10px rgba(79,124,255,0.9) !important; /* glowy effect */
-            transition: all 0.3s ease-in-out;
-        }
-        .stButton button:hover {
-            background-color: #2563eb !important;
-            box-shadow: 0px 0px 20px rgba(79,124,255,1) !important;
-            transform: scale(1.05);
-        }
+      background-color: #1e3a8a; /* Navy blue */
+      border-radius: 100px;
+      box-shadow: rgba(30, 58, 138, .2) 0 -25px 18px -14px inset,
+                  rgba(30, 58, 138, .15) 0 1px 2px,
+                  rgba(30, 58, 138, .15) 0 2px 4px,
+                  rgba(30, 58, 138, .15) 0 4px 8px,
+                  rgba(30, 58, 138, .15) 0 8px 16px,
+                  rgba(30, 58, 138, .15) 0 16px 32px;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      font-family: 'Poppins', -apple-system, system-ui, Roboto, sans-serif;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 250ms;
+      border: 0;
+      font-size: 16px;
+      font-weight: 600;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .stButton button:hover {
+      box-shadow: rgba(30, 58, 138, .35) 0 -25px 18px -14px inset,
+                  rgba(30, 58, 138, .25) 0 1px 2px,
+                  rgba(30, 58, 138, .25) 0 2px 4px,
+                  rgba(30, 58, 138, .25) 0 4px 8px,
+                  rgba(30, 58, 138, .25) 0 8px 16px,
+                  rgba(30, 58, 138, .25) 0 16px 32px;
+      transform: scale(1.05) rotate(-1deg);
+    }
 
         /* Title Styling */
         .css-10trblm {
