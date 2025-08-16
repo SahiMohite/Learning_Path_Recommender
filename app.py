@@ -6,67 +6,58 @@ api_key = st.secrets["api_keys"]["google_api_key"]
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
-
-# === Custom CSS Styling ===
 st.markdown("""
     <style>
-    /* Background gradient */
-    .stApp {
-        background: linear-gradient(135deg, #89f7fe, #66a6ff);
-        font-family: 'Segoe UI', sans-serif;
-    }
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    /* Heading animation */
-    h1 {
-        text-align: center;
-        color: white !important;
-        font-size: 3rem !important;
-        animation: fadeInDown 1s ease-in-out;
-    }
+        html, body, [class*="css"]  {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            background-color: #011147; /* rgb(1,17,71) */
+        }
 
-    @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+        /* Style the selectbox */
+        .stSelectbox label {
+            font-size: 18px !important;
+            font-weight: 600 !important;
+        }
+        .stSelectbox div[data-baseweb="select"] {
+            font-size: 16px !important;
+            background-color: #0a1c5a !important;
+            border-radius: 8px !important;
+            border: 1px solid #4f7cff !important;
+            padding: 6px !important;
+        }
 
-    /* Glassmorphism effect for main blocks */
-    .block-container {
-        background: rgba(255, 255, 255, 0.15);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
+        /* Style the button */
+        .stButton button {
+            background-color: #1e40af !important;
+            color: white !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            border-radius: 10px !important;
+            padding: 10px 20px !important;
+            border: none !important;
+            box-shadow: 0px 0px 10px rgba(79,124,255,0.9) !important; /* glowy effect */
+            transition: all 0.3s ease-in-out;
+        }
+        .stButton button:hover {
+            background-color: #2563eb !important;
+            box-shadow: 0px 0px 20px rgba(79,124,255,1) !important;
+            transform: scale(1.05);
+        }
 
-    /* Buttons */
-    div.stButton > button {
-        background-color: #ff6b6b;
-        color: white;
-        border-radius: 12px;
-        padding: 0.6rem 1.2rem;
-        font-size: 1.1rem;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        border: none;
-    }
-    div.stButton > button:hover {
-        background-color: #ff4757;
-        transform: scale(1.05);
-    }
-
-    /* Selectbox & Slider styling */
-    .stSelectbox, .stSlider {
-        font-size: 1.1rem !important;
-    }
-
-    /* Subheader text */
-    h3 {
-        color: #2c3e50 !important;
-        font-weight: bold;
-    }
+        /* Title Styling */
+        .css-10trblm {
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            text-align: center !important;
+        }
     </style>
 """, unsafe_allow_html=True)
+
 
 # === UI Setup ===
 st.set_page_config(page_title="🎓 MentorMind")
