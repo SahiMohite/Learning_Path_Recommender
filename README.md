@@ -25,5 +25,8 @@ The purpose of this app is to act as a **guidance assistant** that can help user
 
 ---
 
+## 🚀 Live Demo
+Check out the live version of the app here: [MentorMind](https://mentormind.streamlit.app/)
+
 
 
